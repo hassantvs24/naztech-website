@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -324,22 +327,36 @@
           <h2 class="mb-5">Contact With ME</h2>
           <div class="row">
             <div class="col-md-4">
-              <form method=”post” action=”<?php echo htmlspecialchars($_SERVER[‘PHP_SELF’]); ?>” >
+
+            <?php
+
+                if(isset($_SESSION['flash_msg'])) {
+                    $message = $_SESSION['flash_msg'] ?? '';
+                    unset($_SESSION['flash_msg']);
+                    echo $message;
+                }
+              ?>
+
+              <form method="post" action="send.php" >
                 <div class="form-group">
                   <label for="name">Name <sup>*</span></label>
-                  <input type="email" class="form-control" id="name" placeholder="Your name" required>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
                 </div>
                 <div class="form-group">
                   <label for="email">Email <sup>*</span></label>
-                  <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
                 </div>
                 <div class="form-group">
-                  <label for="files">Upload File</label>
-                  <input type="file" class="form-control-file" id="files">
+                  <label for="subject">Subject <sup>*</span></label>
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                 </div>
+                <!-- <div class="form-group">
+                  <label for="files">Upload File</label>
+                  <input type="file" class="form-control-file" name="file" id="files">
+                </div> -->
                 <div class="form-group">
                   <label for="message">Message <sup>*</span></label>
-                  <textarea class="form-control" id="message" rows="3" required></textarea>
+                  <textarea class="form-control" id="message" rows="3"  name="message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-secondary mb-2" style="cursor: pointer; background-color: teal;">Send Message</button>
               </form>
