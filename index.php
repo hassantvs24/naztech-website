@@ -52,10 +52,13 @@
             <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#interests">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Download</a>
+            <a class="nav-link js-scroll-trigger" href="#awards">CV &amp; Cover Letter</a>
           </li>
         </ul>
       </div>
@@ -285,6 +288,37 @@
         </div>
       </section>
 
+      
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio">
+        <div class="my-auto">
+          <h2 class="mb-5">Portfolio</h2>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="img/SYLHETI-BAZAR.png" class="card-img-top" alt="Sylheti Bazar">
+                <div class="card-body">
+                  <h5 class="card-title">Sylheti Bazar</h5>
+                  <p class="card-text">This is a complete e-commerce solutions for single vendor</p>
+                  <a href="http://sylhetibazar.com" target="_blank" class="btn btn-primary">Check it</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="img/kash-army.png" class="card-img-top" alt="Kash Army">
+                <div class="card-body">
+                  <h5 class="card-title">Kash Army</h5>
+                  <p class="card-text">This is a POS and Inventory System for Small & Medium businesses.</p>
+                  <a href="http://army.sylhetibazar.com" target="_blank" class="btn btn-primary">Check it</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
           <h2 class="mb-5">Contact With ME</h2>
@@ -293,11 +327,11 @@
               <form>
                 <div class="form-group">
                   <label for="name">Name <sup>*</span></label>
-                  <input type="email" class="form-control" id="name" placeholder="Your name">
+                  <input type="email" class="form-control" id="name" placeholder="Your name" required>
                 </div>
                 <div class="form-group">
                   <label for="email">Email <sup>*</span></label>
-                  <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                 </div>
                 <div class="form-group">
                   <label for="files">Upload File</label>
@@ -305,9 +339,9 @@
                 </div>
                 <div class="form-group">
                   <label for="message">Message <sup>*</span></label>
-                  <textarea class="form-control" id="message" rows="3"></textarea>
+                  <textarea class="form-control" id="message" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary mb-2">Send Message</button>
+                <button type="submit" class="btn btn-secondary mb-2" style="cursor: pointer; background-color: teal;">Send Message</button>
               </form>
             </div>
             <div class="col-md-8">
