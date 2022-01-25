@@ -324,7 +324,7 @@
           <h2 class="mb-5">Contact With ME</h2>
           <div class="row">
             <div class="col-md-4">
-              <form>
+              <form method=”post” action=”<?php echo htmlspecialchars($_SERVER[‘PHP_SELF’]); ?>” >
                 <div class="form-group">
                   <label for="name">Name <sup>*</span></label>
                   <input type="email" class="form-control" id="name" placeholder="Your name" required>
